@@ -1,11 +1,7 @@
-﻿# CMakeList.txt : CMake project for NetControl, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.8)
 
-project ("NetControl")
+project (NetControl)
 
-# Add source to this project's executable.
-add_executable (NetControl "src/NetControl.cpp" )
+set(SOURCE_EXE src/NetControl.cpp src/core/Windows/WinNetManager.cpp)
 
-# TODO: Add tests and install targets if needed.
+add_executable (NetControl ${SOURCE_EXE})
